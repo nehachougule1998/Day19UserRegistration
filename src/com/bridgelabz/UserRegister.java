@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class UserRegister {
 	
 public static void main(String[] args) {
-		
+	
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter your first name :");
 		String firstName = scan.nextLine();
@@ -51,11 +51,13 @@ public static void main(String[] args) {
 	}
 	
 	public static boolean password(String password) {
-		String pattern = "[a-zA-Z0-9]{8,}$";
+		String pattern = "^[A-Z]{1}[a-zA-Z0-9]{7,}$";
 		if(password.matches(pattern)) {
 			return true;
 		}
 		return false;
 	}
+
+
 }
 
